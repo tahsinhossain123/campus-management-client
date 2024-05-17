@@ -7,51 +7,72 @@ It constructs a React component to display the new student page.
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import { useEffect } from 'react';
 
 // Create styling for the input form
-const useStyles = makeStyles( () => ({
-  formContainer:{  
-    width: '500px',
-    backgroundColor: '#f0f0f5',
-    borderRadius: '5px',
-    margin: 'auto',
-  },
-  title: {
-    flexGrow: 1,
-    textAlign: 'left',
-    textDecoration: 'none'
-  }, 
-  customizeAppBar:{
-    backgroundColor: '#11153e',
-    shadows: ['none'],
-  },
-  formTitle:{
-    backgroundColor:'#c5c8d6',
-    marginBottom: '15px',
-    textAlign: 'center',
-    borderRadius: '5px 5px 0px 0px',
-    padding: '3px'
-  },
+const useStyles = makeStyles(() => ({
+    formContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        width: '500px',
+        margin: 'auto',
+        marginTop: '20px',
+        backgroundColor: '#57d1df'
+    },
+
+    title: {
+        flexGrow: 1,
+        textAlign: 'center',
+        marginTop: '15px',
+        marginBottom: '15px'
+
+    },
+
+    formTitle: {
+        marginBottom: '15px',
+        textAlign: 'center',
+        backgroundColor: '#108c9a',
+        borderRadius: '3px',
+        padding: '10px',
+    
+
+    },
+
+    customizeAppBar: {
+        backgroundColor: '#fff2e6',
+        color: '#11153e',
+    },
+    
 }));
 
 const NewStudentView = (props) => {
-  const {handleChange, handleSubmit } = props;
+  const {handleChange, handleSubmit, campusId} = props;
   const classes = useStyles();
+  useEffect(() => {
+    if (campusId && campusId !== null) {
+      handleChange({
+        target: {
+          name: 'campusId',
+          value: campusId.campus_id,
+        },
+      });
+    }
+  }, [campusId, handleChange]);
 
-  // Render a New Student view with an input form
+    // Render a New Student view with an input form
   return (
     <div>
-      <h1>New Student</h1>
+      <h1>NEW STUDENT</h1>
 
       <div className={classes.root}>
         <div className={classes.formContainer}>
           <div className={classes.formTitle}>
-            <Typography style={{fontWeight: 'bold', fontFamily: 'Courier, sans-serif', fontSize: '20px', color: '#11153e'}}>
-              Add a Student
+            <Typography style={{fontSize: '20px', fontWeight: 'bold'}}>
+              ADD STUDENT
             </Typography>
           </div>
           <form style={{textAlign: 'center'}} onSubmit={(e) => handleSubmit(e)}>
-            <label style= {{color:'#11153e', fontWeight: 'bold'}}>First Name: </label>
+            <label style={{color:'#11153e', fontWeight: 'bold'}}>First Name: </label>
             <input type="text" name="firstname" onChange ={(e) => handleChange(e)} />
             <br/>
             <br/>
@@ -61,8 +82,23 @@ const NewStudentView = (props) => {
             <br/>
             <br/>
 
-            <label style={{color:'#11153e', fontWeight: 'bold'}}>Campus Id: </label>
-            <input type="text" name="campusId" onChange={(e) => handleChange(e)} />
+            <label style={{color:'#11153e', fontWeight: 'bold'}}>Email: </label>
+            <input type="text" name="email" onChange={(e) => handleChange(e)} />
+            <br/>
+            <br/>
+
+            <label style={{color:'#11153e', fontWeight: 'bold'}}>imageURL: </label>
+            <input type="text" name="imageURL" onChange={(e) => handleChange(e)} />
+            <br/>
+            <br/>
+
+            <label style={{color:'#11153e', fontWeight: 'bold'}}>GPA: </label>
+            <input type="text" name="gpa" onChange={(e) => handleChange(e)} />
+            <br/>
+            <br/>
+
+            <label style={{color:'#11153e', fontWeight: 'bold'}}>Campus ID: </label>
+            <input type="text" defaultValue={campusId && campusId.campus_id !== null ? campusId.campus_id : ''} name='campusId' onChange={(e) => handleChange(e)} />
             <br/>
             <br/>
 
