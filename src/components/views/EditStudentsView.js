@@ -11,7 +11,7 @@ const useStyles = makeStyles(() => ({
         width: '500px',
         margin: 'auto',
         marginTop: '20px',
-        backgroundColor: '#ffcc99',
+        backgroundColor: '#57d1df'
     },
 
     title: {
@@ -25,7 +25,7 @@ const useStyles = makeStyles(() => ({
     formTitle: {
         marginBottom: '15px',
         textAlign: 'center',
-        backgroundColor: '#e67300',
+        backgroundColor: '#108c9a',
         borderRadius: '3px',
         padding: '10px',
     
