@@ -1,11 +1,12 @@
-Final Project Client
+# Final Project Server
 
-contributors:
+## contributors
 
-Mike Esquivel
-Amira Abdelmohsen
-Dinasty Kelly
-Tahsin Hossain
+### Amira Abdelmohsen
+### Dinasty Kelly
+### Tahsin Hossain
+### Mike Esquivel
+
 
 ----------
  Set up and run the client (front-end) application on your local machine
