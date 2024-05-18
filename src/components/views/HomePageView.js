@@ -8,7 +8,10 @@ const HomePageView = () => {
   // Render Home page view
   return (
     <div >
+      <br></br>
       <h1>Home Page</h1>
+      <h2>Thank you for visiting our Campus Management System!</h2>
+      <br></br>
     </div>
   );    
 }
