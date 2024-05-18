@@ -1,11 +1,11 @@
-# Final Project Server
+# Final Project Client
 
 ## contributors
 
-### Amira Abdelmohsen
-### Dinasty Kelly
-### Tahsin Hossain
-### Mike Esquivel
+Amira Abdelmohsen
+Dinasty Kelly
+Tahsin Hossain
+Mike Esquivel
 
 
 ----------
