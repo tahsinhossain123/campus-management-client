@@ -3,12 +3,15 @@
 ## contributors
 
 Amira Abdelmohsen
+
 Dinasty Kelly
+
 Tahsin Hossain
+
 Mike Esquivel
+
 ----------
 
-https://github.com/johnnylaicode/client-starter-code
 ----------
  Set up and run the client (front-end) application on your local machine
 1.	Start a terminal (e.g., Git Bash) on your local machine.
